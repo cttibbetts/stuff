@@ -1,0 +1,116 @@
+# My custom i3 config
+set $windows Mod4
+set $mod Mod1
+
+set $terminal urxvt
+set $font pango:System San Francisco Display
+set $fontsize 10
+set $launcher exec rofi -show run 
+set $wallpaper /home/vagrant/.config/wallpaper.jpg
+
+set $gaps_inner 5 
+set $gaps_outer 10 
+set $border_px 3
+
+font $font $fontsize
+
+#################### Applications ####################
+bindsym $mod+Return exec $terminal
+bindsym $mod+d exec $launcher
+
+##################### Workspaces #####################
+set $workspace1 1
+set $workspace2 2
+set $workspace3 3
+set $workspace4 4
+set $workspace5 5
+set $workspace6 6
+set $workspace7 7
+set $workspace8 8
+set $workspace9 9
+set $workspace10 10
+
+# Switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# Move container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+###################### Commands ######################
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?` -b `Yes` `i3-msg exit`"
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split direction
+#bindsym $mod+h split h ### CONFLICT with the movement keys hjkl
+#bindsym $mod+v split v 
+
+# window layout
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# resize window
+# bindsym $mod+r mode "resize"
+# I don't like how they do their resizing, so for now I'm not including it.
+
+######################## Bar #########################
+bar {
+	status_command i3status
+	tray_output primary
+	position top
+}
+bindsym $mod+shift+x exec i3lock
+
+################### Customizations ##################
+exec_always feh --bg-fill $wallpaper
+exec compton
+
+for_window [class="^.*"] border pixel $border_px
+gaps inner $gaps_inner
+gaps outer $gaps_outer 
