@@ -54,3 +54,6 @@ popd
 # install i3 requirements
 yum install -y i3status feh compton
 rpm -i ../rpms/i3lock-2.5-2.el7.centos.x86_64.rpm ## maybe get the tar instead? i3wm.org/i3lock
+
+# install audio drivers
+yum install -y dbus-x11 # pulseaudio
