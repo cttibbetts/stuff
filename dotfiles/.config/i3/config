@@ -3,8 +3,6 @@ set $windows Mod4
 set $mod Mod1
 
 set $terminal urxvt
-set $font pango:System San Francisco Display
-set $fontsize 10
 set $launcher exec rofi -show run 
 set $wallpaper /home/vagrant/.config/wallpaper.jpg
 
@@ -12,16 +10,14 @@ set $gaps_inner 5
 set $gaps_outer 10 
 set $border_px 3
 
-font $font $fontsize
-
 #################### Applications ####################
 bindsym $mod+Return exec $terminal
 bindsym $mod+d exec $launcher
 
 ##################### Workspaces #####################
-set $workspace1 1
-set $workspace2 2
-set $workspace3 3
+set $workspace1 "1. "
+set $workspace2 "2.  Atom"
+set $workspace3 "3.  Firefox"
 set $workspace4 4
 set $workspace5 5
 set $workspace6 6
@@ -53,6 +49,10 @@ bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# Move workspace
+bindsym control+$mod+h move workspace to output left
+bindsym control+$mod+l move workspace to output right
 
 ###################### Commands ######################
 bindsym $mod+Shift+q kill
@@ -104,8 +104,9 @@ bar {
 	status_command i3status
 	tray_output primary
 	position top
+	font pango:Awesome 10
 }
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec /home/vagrant/.config/i3/fancylock
 
 ################### Customizations ##################
 exec_always feh --bg-fill $wallpaper
@@ -114,3 +115,4 @@ exec compton
 for_window [class="^.*"] border pixel $border_px
 gaps inner $gaps_inner
 gaps outer $gaps_outer 
+
