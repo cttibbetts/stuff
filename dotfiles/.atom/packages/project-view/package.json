@@ -1,0 +1,127 @@
+{
+  "name": "project-view",
+  "main": "./lib/project-view",
+  "version": "0.5.0",
+  "description": "Show project details in the Atom tree-view",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subesokun/atom-project-view.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "fs-plus": "^2.7.0"
+  },
+  "keywords": [
+    "project",
+    "productivity",
+    "settings"
+  ],
+  "readme": "# Project View package\n\nShows project details in the Atom tree-view.\n\n### Screenshots\n\n![project-view Screenshot](https://github.com/subesokun/atom-project-view/blob/master/screenshot.png?raw=true)\n\n![project-view Screenshot Settings](https://github.com/subesokun/atom-project-view/blob/master/screenshot-settings.png?raw=true)\n\n### Installation\n\n```\napm install project-view\n```\n\n### Features\n\n* Replaces the Atom tree-view root folder name by the corresponding project name if available\n* Shows the project folder path next to the project name\n* Supported files to retrieve the project name (ordered by priority):\n * `package.json` (npm-like)\n * `.bower.json` (bower)\n * `composer.json` (Composer)\n\n### Contributing\n\nThe project-view package tries to follow the [Atom contribution guidelines](https://atom.io/docs/latest/contributing).\n\nEspecially, the commits should follow the conventions defined in the *Git Commit Messages* section of the contribution guidelines.\n\n[See all contributors](https://github.com/subesokun/atom-project-view/graphs/contributors)\n\n### License\n\nMIT\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/subesokun/atom-project-view/issues"
+  },
+  "homepage": "https://github.com/subesokun/atom-project-view#readme",
+  "_id": "project-view@0.5.0",
+  "_shasum": "c43ef43dc8bb3cba9533b132218c1269e3c25c8a",
+  "_resolved": "file:../d-116210-9292-hc553r/package.tgz",
+  "_from": "../d-116210-9292-hc553r/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "fs-plus",
+        "version": "2.8.1",
+        "path": "node_modules/fs-plus/lib/fs-plus.js"
+      },
+      {
+        "name": "async",
+        "version": "0.2.10",
+        "path": "node_modules/fs-plus/node_modules/async/lib/async.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.3.5",
+        "path": "node_modules/fs-plus/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.2.8",
+        "path": "node_modules/fs-plus/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/fs-plus/node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/project-view.coffee",
+        "lib/project.coffee"
+      ],
+      ".js": [
+        "node_modules/fs-plus/lib/fs-plus.js",
+        "node_modules/fs-plus/node_modules/async/lib/async.js",
+        "node_modules/fs-plus/node_modules/mkdirp/examples/pow.js",
+        "node_modules/fs-plus/node_modules/mkdirp/index.js",
+        "node_modules/fs-plus/node_modules/rimraf/bin.js",
+        "node_modules/fs-plus/node_modules/rimraf/rimraf.js",
+        "node_modules/fs-plus/node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      ],
+      ".json": [
+        "node_modules/fs-plus/node_modules/async/component.json",
+        "node_modules/fs-plus/node_modules/async/package.json",
+        "node_modules/fs-plus/node_modules/mkdirp/package.json",
+        "node_modules/fs-plus/node_modules/rimraf/package.json",
+        "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/fs-plus/node_modules/underscore-plus/package.json",
+        "node_modules/fs-plus/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "",
+          "spec"
+        ],
+        "dependencies": {
+          "fs-plus": "^2.7.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/lib",
+          "node_modules/fs-plus"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x",
+          "mkdirp": "~0.3.5",
+          "rimraf": "~2.2.2",
+          "async": "~0.2.9"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/node_modules/underscore-plus/lib",
+          "node_modules/fs-plus/node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      }
+    ]
+  }
+}

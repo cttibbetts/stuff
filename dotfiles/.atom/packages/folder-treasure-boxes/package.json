@@ -1,0 +1,38 @@
+{
+  "name": "folder-treasure-boxes",
+  "main": "./lib/folder-treasure-boxes",
+  "version": "2.1.0",
+  "description": "A link to the past inspired treasure box folders",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yahkob/folder-treasure-boxes.git"
+  },
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {},
+  "readme": "# folder-treasure-boxes\n\nCode is treasure. Make your folders treasure boxes.\n![alt tag](https://s3.amazonaws.com/jharclerode/zeldafileicons.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/Yahkob/folder-treasure-boxes/issues"
+  },
+  "homepage": "https://github.com/Yahkob/folder-treasure-boxes#readme",
+  "_id": "folder-treasure-boxes@2.1.0",
+  "_shasum": "7e2de6b4964b91e6a7d779d7ae06f96b7ffea19c",
+  "_resolved": "file:../d-116210-9292-1nsvvh/package.tgz",
+  "_from": "../d-116210-9292-1nsvvh/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/folder-treasure-boxes.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

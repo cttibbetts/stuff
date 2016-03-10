@@ -9,13 +9,17 @@ fi
 # Set the timezone to be right
 timedatectl set-timezone America/New_York
 
+# Other useful stuff
+yum install -y htop
+
 # firefox
 yum install -y firefox
 
 # rofi
 pushd /tmp
-git clone https://github.com/DaveDavenport/rofi.git rofi
-pushd rofi
+wget https://github.com/DaveDavenport/rofi/releases/download/0.15.12/rofi-0.15.12.tar.gz
+tar -xzf rofi-0.15.12.tar.gz
+pushd rofi-0.15.12
 ./configure
 make
 make install
@@ -25,13 +29,15 @@ popd
 # vundle
 git clone https://github.com/VundleVim/Vundle.vim.git /home/vagrant/.vim/bundle/Vundle.vim
 
-# alsa (audio)
+# alsa (audio) and set volume 100
 yum install -y alsa-utils
+amixer sset Master 100%
+amixer sset PCM 100%
 
 # atom
 pushd /tmp
 wget https://atom.io/download/rpm -O atom.x86_64.rpm
-yum install -y atom.x86_64.rpm
+yum install -y GConf2 atom.x86_64.rpm
 popd
 
 # update gocode and godef
@@ -50,7 +56,7 @@ apm install minimap minimap-cursorline minimap-git-diff minimap-highlight-select
 	vim-mode ex-mode go-plus project-view tree-view-git-status
 
 # Fancy i3 lock screen
-yum install -y giblib giblib-devel
+yum install -y giblib giblib-devel ImageMagick
 pushd /tmp
 wget http://scrot.sourcearchive.com/downloads/0.8/scrot_0.8.orig.tar.gz
 tar -xzf scrot_0.8.orig.tar.gz

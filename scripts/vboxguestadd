@@ -1,0 +1,5 @@
+yum install -y gcc kernel-devel-$(uname -r)
+mkdir -p /media/cdrom
+mount /dev/cdrom /media/cdrom
+/media/cdrom/VBoxLinuxAdditions.run
+
