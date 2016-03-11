@@ -39,3 +39,12 @@ URxvt.depth: 32
 ! white
 *.color7:       #efefef
 *.color15:      #d9d9d9
+
+! --------------------------
+! ROFI color theme
+! --------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:aa273238, argb:aa273238, argb:aa1e2529
+rofi.color-normal: argb:aa273238, #c1c1c1, argb:aa273238, #394249, #ffffff
+rofi.color-active: argb:aa273238, #80cbc4, argb:aa273238, #394249, #80cbc4
+rofi.color-urgent: argb:aa273238, #ff1844, argb:aa273238, #394249, #ff1844

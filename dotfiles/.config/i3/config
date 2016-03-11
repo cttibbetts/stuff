@@ -3,12 +3,13 @@ set $windows Mod4
 set $mod Mod1
 
 set $terminal urxvt
-set $launcher exec rofi -show run 
 set $wallpaper /home/vagrant/.config/wallpaper.jpg
 
 set $gaps_inner 5 
 set $gaps_outer 10 
 set $border_px 3
+
+set $launcher exec rofi -show run -fullscreen -width 100 -padding 400 -fake-transparency
 
 #################### Applications ####################
 bindsym $mod+Return exec $terminal
@@ -16,8 +17,8 @@ bindsym $mod+d exec $launcher
 
 ##################### Workspaces #####################
 set $workspace1 "1. "
-set $workspace2 "2.  Atom"
-set $workspace3 "3.  Firefox"
+set $workspace2 "2. "
+set $workspace3 "3. "
 set $workspace4 4
 set $workspace5 5
 set $workspace6 6
@@ -50,7 +51,7 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
-# Move workspace
+# Move workspace to another screen
 bindsym control+$mod+h move workspace to output left
 bindsym control+$mod+l move workspace to output right
 
@@ -58,7 +59,6 @@ bindsym control+$mod+l move workspace to output right
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?` -b `Yes` `i3-msg exit`"
 
 # change focus
 bindsym $mod+h focus left
@@ -80,14 +80,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split direction
-#bindsym $mod+h split h ### CONFLICT with the movement keys hjkl
-#bindsym $mod+v split v 
-
 # window layout
 bindsym $mod+f fullscreen toggle
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
