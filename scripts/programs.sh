@@ -43,15 +43,15 @@ popd
 # update gocode and godef
 pushd /home/vagrant/go/src/github.com/nsf/gocode
 git reset --hard
-go get -u github.com/nsf/gocode
+sudo -u vagrant go get -u github.com/nsf/gocode
 popd
 pushd /home/vagrant/go/src/github.com/rogpeppe/godef
 git reset --hard
-go get -u github.com/rogpeppe/godef
+sudo -u vagrant go get -u github.com/rogpeppe/godef
 popd
 
 # apm packages
-apm install minimap minimap-cursorline minimap-git-diff minimap-highlight-selected minimap-selection \
+sudo -u vagrant apm install minimap minimap-cursorline minimap-git-diff minimap-highlight-selected minimap-selection \
 	atom-material-syntax atom-material-ui file-icons folder-treasure-boxes fonts \
 	vim-mode ex-mode go-plus project-view tree-view-git-status
 

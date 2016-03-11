@@ -2,9 +2,9 @@
 
 
 echo "Copying over ssh keys..."
-for file in $(find /vagrant/custom/config/.ssh -type f -printf "%f\n")
+for file in $(find /vagrant/custom/.ssh -type f -printf "%f\n")
 do
-	cp /vagrant/custom/config/.ssh/$file /home/vagrant/.ssh/$file
+	cp /vagrant/custom/.ssh/$file /home/vagrant/.ssh/$file
 	chmod 600 /home/vagrant/.ssh/$file
 done
 eval `ssh-agent`
