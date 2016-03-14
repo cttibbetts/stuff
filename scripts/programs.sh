@@ -26,9 +26,6 @@ make install
 popd
 popd
 
-# vundle
-git clone https://github.com/VundleVim/Vundle.vim.git /home/vagrant/.vim/bundle/Vundle.vim
-
 # alsa (audio) and set volume 100
 yum install -y alsa-utils
 amixer sset Master 100%

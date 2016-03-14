@@ -1,6 +1,8 @@
 set nocompatible
 filetype off
 
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -8,9 +10,6 @@ call vundle#begin()
 
 " Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-
-
 Plugin 'fatih/vim-go'
 
 

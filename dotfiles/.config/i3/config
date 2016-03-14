@@ -95,11 +95,12 @@ floating_modifier $mod
 
 ######################## Bar #########################
 bar {
-	status_command i3status
+	status_command i3status --config ~/.config/i3/i3status.conf
 	tray_output primary
 	position top
 	font pango:Awesome 10
 }
+
 bindsym $mod+shift+x exec /home/vagrant/.config/i3/fancylock
 
 ################### Customizations ##################
