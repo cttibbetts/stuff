@@ -1,2 +1,7 @@
 dotfiles/.atom/.apm
 dotfiles/.atom/storage
+dotfiles/.atom/compile-cache
+dotfiles/.atom/.node-gyp
+dotfiles/.atom/blob-store
+dotfiles/.atom/nohup.out
+dotfiles/.atom/packages
