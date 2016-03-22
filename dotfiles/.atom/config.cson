@@ -9,6 +9,7 @@
     ui:
       panelContrast: true
       panelShadows: true
+  "autocomplete-go": {}
   core:
     autoHideMenuBar: true
     openEmptyEditorOnStart: false
