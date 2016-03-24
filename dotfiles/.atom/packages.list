@@ -9,8 +9,8 @@ fonts@1.2.0
 go-config@1.1.2
 go-get@1.0.1
 go-plus@4.0.1
-gofmt@1.1.2
-gometalinter-linter@1.0.4
+gofmt@1.1.3
+gometalinter-linter@1.0.6
 gorename@1.0.0
 language-proto@0.7.0
 linter@1.11.4
