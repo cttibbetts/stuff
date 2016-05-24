@@ -8,6 +8,7 @@ fi
 yum -y groupinstall "X window system"
 
 # Install repos
+yum -y install epel-release
 yum-config-manager --add-repo http://download.opensuse.org/repositories/X11:QtDesktop/CentOS_7/X11:QtDesktop.repo
 yum-config-manager --add-repo https://copr.fedorainfracloud.org/coprs/admiralnemo/i3wm-el7/repo/epel-7/admiralnemo-i3wm-el7-epel-7.repo
 
