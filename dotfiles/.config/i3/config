@@ -3,7 +3,7 @@ set $windows Mod4
 set $mod Mod1
 
 set $terminal urxvt
-set $wallpaper /home/vagrant/.config/wallpaper.jpg
+set $wallpaper ~/.config/wallpaper.jpg
 
 set $gaps_inner 5 
 set $gaps_outer 10 
@@ -19,7 +19,7 @@ bindsym $mod+d exec $launcher
 set $workspace1 "1. "
 set $workspace2 "2. "
 set $workspace3 "3. "
-set $workspace4 4
+set $workspace4 "4. "
 set $workspace5 5
 set $workspace6 6
 set $workspace7 7
@@ -101,7 +101,7 @@ bar {
 	font pango:Awesome 10
 }
 
-bindsym $mod+shift+x exec /home/vagrant/.config/i3/fancylock
+bindsym $mod+shift+x exec ~/.config/i3/fancylock
 
 ################### Customizations ##################
 exec_always feh --bg-fill $wallpaper
