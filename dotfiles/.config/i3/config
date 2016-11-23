@@ -108,6 +108,6 @@ exec_always feh --bg-fill $wallpaper
 exec compton
 
 for_window [class="^.*"] border pixel $border_px
-gaps inner $gaps_inner
-gaps outer $gaps_outer 
+#gaps inner $gaps_inner
+#gaps outer $gaps_outer
 

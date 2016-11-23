@@ -31,12 +31,6 @@ yum install -y alsa-utils
 amixer sset Master 100%
 amixer sset PCM 100%
 
-# atom
-pushd /tmp
-wget https://atom.io/download/rpm -O atom.x86_64.rpm
-yum install -y GConf2 atom.x86_64.rpm
-popd
-
 # update gocode and godef
 pushd /home/vagrant/go/src/github.com/nsf/gocode
 git reset --hard

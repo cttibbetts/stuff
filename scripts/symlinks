@@ -5,7 +5,6 @@ pushd ~
 rm -rf .atom .fonts .vim .config/i3
 popd
 
-ln -s $(realpath ../dotfiles/.atom) ~/.atom
 ln -s $(realpath ../dotfiles/.fonts) ~/.fonts
 ln -s $(realpath ../dotfiles/.vim) ~/.vim
 
