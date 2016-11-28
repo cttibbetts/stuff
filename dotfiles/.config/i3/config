@@ -2,11 +2,9 @@
 set $windows Mod4
 set $mod Mod1
 
-set $terminal urxvt
+set $terminal urxvt256c
 set $wallpaper ~/.config/wallpaper.jpg
 
-set $gaps_inner 5 
-set $gaps_outer 10 
 set $border_px 3
 
 set $launcher exec rofi -show run -fullscreen -width 100 -padding 400 -fake-transparency
@@ -16,10 +14,10 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+d exec $launcher
 
 ##################### Workspaces #####################
-set $workspace1 "1. "
-set $workspace2 "2. "
-set $workspace3 "3. "
-set $workspace4 "4. "
+set $workspace1 "1. "
+set $workspace2 "2. "
+set $workspace3 "3. "
+set $workspace4 4
 set $workspace5 5
 set $workspace6 6
 set $workspace7 7

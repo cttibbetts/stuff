@@ -1,11 +1,11 @@
-URxvt.font: xft:Roboto Mono for Powerline:size=10
+URxvt.font: xft:Roboto Mono for Powerline:pixelsize=13
 URxvt.scrollBar: false
 
 URxvt.depth: 32
 
 ! special
 *.foreground:   #d9d9d9
-*.background:   [95]#212121
+*.background:   [85]#212121
 *.cursorColor:  #d9d9d9
 
 ! black

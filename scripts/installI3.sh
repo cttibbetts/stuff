@@ -8,14 +8,18 @@ fi
 yum -y groupinstall "X window system"
 
 # Install repos
-yum -y install epel-release yum-utils
+yum -y install yum-utils epel-release
+# For various i3 packages
 yum-config-manager --add-repo https://copr.fedorainfracloud.org/coprs/admiralnemo/i3wm-el7/repo/epel-7/admiralnemo-i3wm-el7-epel-7.repo
+# For compton
+yum-config-manager --add-repo http://download.opensuse.org/repositories/X11:QtDesktop/CentOS_7/X11:QtDesktop.repo
+# For rofi
+yum-config-manager --add-repo http://copr.fedorainfracloud.org/coprs/azmo/rofi/repo/epel-7/azmo-rofi-epel-7.repo
 
 # install i3 gaps dependencies
 sudo yum install -y \
   dmenu \
-  rxvt-unicode \
-  terminus-fonts
+  rxvt-unicode-256color
 
 # the libxkb x11 modules aren't available in centos,
 # so they were downloaded from
@@ -30,3 +34,4 @@ yum install -y i3status feh compton i3lock
 
 # install audio drivers
 yum install -y dbus-x11 # pulseaudio
+

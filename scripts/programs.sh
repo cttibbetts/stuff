@@ -10,16 +10,16 @@ fi
 timedatectl set-timezone America/New_York
 
 # Other useful stuff
-yum install -y htop
+yum install -y htop zsh
 
 # firefox
 yum install -y firefox
 
 # rofi
 pushd /tmp
-wget https://github.com/DaveDavenport/rofi/releases/download/0.15.12/rofi-0.15.12.tar.gz
-tar -xzf rofi-0.15.12.tar.gz
-pushd rofi-0.15.12
+wget https://github.com/DaveDavenport/rofi/releases/download/1.2.0/rofi-1.2.0.tar.gz
+tar -xzf rofi-1.2.0.tar.gz
+pushd rofi-1.2.0
 ./configure
 make
 make install
@@ -31,21 +31,6 @@ yum install -y alsa-utils
 amixer sset Master 100%
 amixer sset PCM 100%
 
-# update gocode and godef
-pushd /home/vagrant/go/src/github.com/nsf/gocode
-git reset --hard
-sudo -u vagrant go get -u github.com/nsf/gocode
-popd
-pushd /home/vagrant/go/src/github.com/rogpeppe/godef
-git reset --hard
-sudo -u vagrant go get -u github.com/rogpeppe/godef
-popd
-
-# apm packages
-sudo -u vagrant apm install minimap minimap-cursorline minimap-git-diff minimap-highlight-selected minimap-selection \
-	atom-material-syntax atom-material-ui file-icons folder-treasure-boxes fonts \
-	vim-mode ex-mode go-plus project-view tree-view-git-status
-
 # Fancy i3 lock screen
 yum install -y giblib giblib-devel ImageMagick
 pushd /tmp
@@ -56,5 +41,14 @@ pushd scrot-0.8
 make
 make install
 popd
+popd
+
+# Sublime text 3
+pushd /tmp
+wget https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2
+tar -xjf sublime_text_3_build_3126_x64.tar.bz2
+mv sublime_text_3 /opt/
+ln -s /opt/sublime_text_3/sublime_text /usr/bin/sublime
+ln -s /usr/bin/sublime /usr/bin/subl
 popd
 
