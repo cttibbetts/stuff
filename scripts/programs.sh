@@ -15,6 +15,9 @@ yum install -y htop zsh
 # firefox
 yum install -y firefox
 
+# Zathura document reader (and pdf plugin)
+yum install -y zathura zathura-pdf-poppler
+
 # rofi
 pushd /tmp
 wget https://github.com/DaveDavenport/rofi/releases/download/1.2.0/rofi-1.2.0.tar.gz
