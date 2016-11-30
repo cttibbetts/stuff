@@ -7,7 +7,7 @@ set $wallpaper ~/.config/wallpaper.jpg
 
 set $border_px 3
 
-set $launcher exec rofi -show run -fullscreen -width 100 -padding 400 -fake-transparency
+set $launcher exec rofi -show run
 
 #################### Applications ####################
 bindsym $mod+Return exec $terminal

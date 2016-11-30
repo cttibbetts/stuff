@@ -4,45 +4,55 @@ URxvt.scrollBar: false
 URxvt.depth: 32
 
 ! special
-*.foreground:   #d9d9d9
-*.background:   [85]#212121
-*.cursorColor:  #d9d9d9
+URxvt.foreground:   #d9d9d9
+URxvt.background:   [85]#212121
+URxvt.cursorColor:  #d9d9d9
 
 ! black
-*.color0:       #212121
-*.color8:       #616161
+URxvt.color0:       #212121
+URxvt.color8:       #616161
 
 ! red
-*.color1:       #d1392e
-*.color9:       #e91e63
+URxvt.color1:       #d1392e
+URxvt.color9:       #e91e63
 
 ! green
-*.color2:       #4caf50
-*.color10:      #8bc34a
+URxvt.color2:       #4caf50
+URxvt.color10:      #8bc34a
 
 ! yellow
-*.color3:       #ff9800
-*.color11:      #ffc107
+URxvt.color3:       #ff9800
+URxvt.color11:      #ffc107
 
 ! blue
-*.color4:       #1f77e1
-*.color12:      #03a9f4
+URxvt.color4:       #1f77e1
+URxvt.color12:      #03a9f4
 
 ! magenta
-*.color5:       #6f3cca
-*.color13:      #9c27b0
+URxvt.color5:       #6f3cca
+URxvt.color13:      #9c27b0
 
 ! cyan
-*.color6:       #009688
-*.color14:      #4db6ac
+URxvt.color6:       #009688
+URxvt.color14:      #4db6ac
 
 ! white
-*.color7:       #efefef
-*.color15:      #d9d9d9
+URxvt.color7:       #efefef
+URxvt.color15:      #d9d9d9
 
 ! --------------------------
 ! ROFI color theme
 ! --------------------------
+rofi.font: Roboto 18
+rofi.lines: 15
+rofi.width: 100
+rofi.padding: 400
+rofi.bc: #2f343f
+rofi.bg: #2f343f
+rofi.fg: #f3f4f5
+rofi.hlbg: #2f343f
+rofi.hlfg: #9575cd
+rofi.opacity: 85
 rofi.color-enabled: true
 rofi.color-window: argb:aa273238, argb:aa273238, argb:aa1e2529
 rofi.color-normal: argb:aa273238, #c1c1c1, argb:aa273238, #394249, #ffffff
