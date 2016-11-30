@@ -1,0 +1,45 @@
+#!/bin/bash 
+
+STATUS=$(cat /sys/class/power_supply/BAT0/status)
+POWER=$(cat /sys/class/power_supply/BAT0/capacity)
+
+SYMBOL=""
+if [[ "${STATUS}" = "Full" ]]; then
+    SYMBOL=" "
+elif [[ "${STATUS}" = "Charging" ]]; then
+    # use modulus of current second to show animated battery
+    case "$(( $(date '+%s')%4 ))" in
+        0)
+            SYMBOL=" "
+            ;;
+        1)
+            SYMBOL=" "
+            ;;
+        2)
+            SYMBOL=" "
+            ;;
+        3)
+            SYMBOL=" "
+            ;;
+    esac
+else
+    if [[ "${POWER}" > 80 ]]; then
+        # full
+        SYMBOL=""
+    elif [[ "${POWER}" > 60 ]]; then
+        # three-quarter
+        SYMBOL=""
+    elif [[ "${POWER}" > 40 ]]; then
+        # half
+        SYMBOL=""
+        # quarter
+    elif [[ "${POWER}" > 20 ]]; then
+        SYMBOL=""
+    else
+        # empty
+        SYMBOL=""
+    fi
+fi
+        
+echo "$SYMBOL  $POWER%"
+

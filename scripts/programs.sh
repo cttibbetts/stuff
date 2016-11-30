@@ -18,6 +18,22 @@ yum install -y firefox
 # Zathura document reader (and pdf plugin)
 yum install -y zathura zathura-pdf-poppler
 
+# neofetch (system information display)
+yum-config-manager --add-repo https://copr.fedorainfracloud.org/coprs/konimex/neofetch/repo/epel-7/konimex-neofetch-epel-7.repo
+yum install -y neofetch
+
+# playerctl
+yum install gtk-doc glib2-devel-gobject-intropection-devel dbus-x11
+pushd /tmp
+git clone https://github.com/acrisci/playerctl
+pushd playerctl
+./autogen.sh --prefix=/usr
+make
+make install
+cp /usr/lib/libplayerctl* /lib64/
+popd
+popd
+
 # rofi
 pushd /tmp
 wget https://github.com/DaveDavenport/rofi/releases/download/1.2.0/rofi-1.2.0.tar.gz
@@ -34,18 +50,6 @@ yum install -y alsa-utils
 amixer sset Master 100%
 amixer sset PCM 100%
 
-# Fancy i3 lock screen
-yum install -y giblib giblib-devel ImageMagick
-pushd /tmp
-wget http://scrot.sourcearchive.com/downloads/0.8/scrot_0.8.orig.tar.gz
-tar -xzf scrot_0.8.orig.tar.gz
-pushd scrot-0.8
-./configure
-make
-make install
-popd
-popd
-
 # Sublime text 3
 pushd /tmp
 wget https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2
@@ -54,4 +58,9 @@ mv sublime_text_3 /opt/
 ln -s /opt/sublime_text_3/sublime_text /usr/bin/sublime
 ln -s /usr/bin/sublime /usr/bin/subl
 popd
+
+# Dejavu-sans-mono font (chrome's default monospace font)
+yum install -y dejavu-sans-mono-fonts
+
+# TODO google-play-music-desktop-player
 

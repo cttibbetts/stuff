@@ -8,6 +8,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'bogado/file-line'
 Plug 'vim-polyglot'
+Plug 'osyo-manga/vim-brightest'
 
 call plug#end()
 " }}}

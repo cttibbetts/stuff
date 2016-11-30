@@ -1,0 +1,28 @@
+#!/bin/bash 
+
+ARGUMENTS="--player google-play-music-desktop-player"
+
+ICON_PLAY=""
+ICON_PAUSE=""
+ICON_STOP=""
+CUR_ICON=""
+
+PLAYER_STATUS=$(playerctl ${ARGUMENTS} status)
+INFO_TITLE=$(playerctl ${ARGUMENTS} metadata title)
+INFO_ALBUM=$(playerctl ${ARGUMENTS} metadata album)
+INFO_ARTIST=$(playerctl ${ARGUMENTS} metadata artist)
+
+SYMBOL=""
+
+if [[ "${PLAYER_STATUS}" = "Paused" ]]; then
+    SYMBOL="  ${ICON_PAUSE}"
+elif [[ "${PLAYER_STATUS}" = "Playing" ]]; then
+    SYMBOL=""
+else
+    SYMBOL=""
+fi
+
+if [[ "${INFO_TITLE}" != "" ]] && [[ "${INFO_ARTIST}" != "" ]]; then
+    echo "${INFO_ARTIST} - ${INFO_TITLE}${SYMBOL}"
+fi
+

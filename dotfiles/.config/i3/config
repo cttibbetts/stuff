@@ -12,6 +12,7 @@ set $launcher exec rofi -show run -fullscreen -width 100 -padding 400 -fake-tran
 #################### Applications ####################
 bindsym $mod+Return exec $terminal
 bindsym $mod+d exec $launcher
+bindsym $mod+p exec playerctl play-pause
 
 ##################### Workspaces #####################
 set $workspace1 "1. "
@@ -23,7 +24,7 @@ set $workspace6 6
 set $workspace7 7
 set $workspace8 8
 set $workspace9 9
-set $workspace10 10
+set $workspace10 "10. "
 
 # Switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -93,7 +94,7 @@ floating_modifier $mod
 
 ######################## Bar #########################
 bar {
-	status_command i3status --config ~/.config/i3/i3status.conf
+	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	tray_output primary
 	position top
 	font pango:Awesome 10
