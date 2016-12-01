@@ -14,7 +14,9 @@ INFO_ARTIST=$(playerctl ${ARGUMENTS} metadata artist)
 
 SYMBOL=""
 
-if [[ "${PLAYER_STATUS}" = "Paused" ]]; then
+if [[ "${PLAYER_STATUS}" = "Not available" ]]; then
+    echo ""
+elif [[ "${PLAYER_STATUS}" = "Paused" ]]; then
     SYMBOL="  ${ICON_PAUSE}"
 elif [[ "${PLAYER_STATUS}" = "Playing" ]]; then
     SYMBOL=""
