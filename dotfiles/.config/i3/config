@@ -6,8 +6,10 @@ set $terminal urxvt256c
 set $wallpaper ~/.config/wallpaper.jpg
 
 set $border_px 3
+set $gaps_inner 5
+set $gaps_outer 5
 
-set $launcher exec rofi -show run
+set $launcher exec rofi -show run -hide-scrollbar
 
 #################### Applications ####################
 bindsym $mod+Return exec $terminal
@@ -104,9 +106,9 @@ bindsym $mod+shift+x exec ~/.config/i3/fancylock
 
 ################### Customizations ##################
 exec_always feh --bg-fill $wallpaper
-exec compton
+exec compton --config ~/.config/i3/compton.conf
 
 for_window [class="^.*"] border pixel $border_px
-#gaps inner $gaps_inner
-#gaps outer $gaps_outer
+gaps inner $gaps_inner
+gaps outer $gaps_outer
 

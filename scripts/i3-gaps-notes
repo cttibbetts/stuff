@@ -1,0 +1,61 @@
+Dependencies: libev-devel startup-notification-devel xcb-util-devel xcb-util-cursor-devel xcb-util-keysyms-devel xcb-util-wm-devel xkbcommon-x11-devel yajl-devel pango-devel
+Compile: xcb-util-xrm
+    - dep: xorg-x11-util-macros
+Compile: cairo
+    - dep: cairo-devel
+
+----- DETAILED INSTRUCTIONS -----
+Error: cannot find the required ev_run() function despite trying to link with -lev"
+Solve: sudo yum install libev-devel
+
+Error: No package 'libstartup-notification-1.0' found
+Solve: sudo yum install startup-notification-devel
+
+Error: No package 'xcb-event' found
+Error: No package 'xcb-util' found
+Solve: sudo yum install xcb-util-devel
+
+Error: No package 'xcb-cursor' found
+Solve: sudo yum install xcb-util-cursor-devel
+    - sub: xcb-util-image-devel
+    - sub: xcb-util-renderutil-devel
+
+Error: No package 'xcb-keysyms' found
+Solve: sudo yum install xcb-util-keysyms-devel
+
+Error: No package 'xcb-icccm' found
+Sovle: sudo yum install xcb-util-wm-devel
+
+Error: No package 'xcb-xrm' found
+Solve: Compile and Install xcb-util-xrm
+    git clone git@github.com:Airblader/xcb-util-xrm
+    cd xcb-util-xrm
+    git submodule update --init
+    sudo yum install xorg-x11-util-macros
+    ./autogen.sh --libdir=/usr/lib64
+    make
+    sudo make install
+
+Error: No package 'xkbcommon' found
+Error: No package 'xkbcommon-x11' found
+Solve: sudo yum install libxkbcommon-x11-devel
+    - sub: libxkbcommon-devel
+
+Error: No package 'yajl' found
+Solve: sudo yum install yajl-devel
+
+Error: No package 'cairo' found
+Solve: sudo yum install cairo-devel
+    -sub: expat-devel fontconfig-devel gl-manpages libXdamage-devel libXfixes-devel libXrender-devel
+          libXxf86vm-devel libdrm-devel libpng-devel libxshmfence-devel mesa-libEGL-devel mesa-libGL-devel
+          pixman-devel
+    Error: Requested 'cairo >= 1.14.4' but version of cairo is 1.14.2
+    Solve: git clone git://anongit.freedesktop.org/git/cairo
+        cd cairo
+        ./autogen.sh --libdir=/usr/lib64
+        make
+        sudo make install
+        
+Error: No package 'pangocairo' found
+Solve: sudo yum install pango-devel
+    -sub: harfbuzz-devel harfbuzz-icu libXft-devel libicu-devel

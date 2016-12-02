@@ -44,17 +44,13 @@ URxvt.color15:      #d9d9d9
 ! ROFI color theme
 ! --------------------------
 rofi.font: Roboto 18
-rofi.lines: 15
+rofi.lines: 13
 rofi.width: 100
 rofi.padding: 400
-rofi.bc: #2f343f
-rofi.bg: #2f343f
-rofi.fg: #f3f4f5
-rofi.hlbg: #2f343f
-rofi.hlfg: #9575cd
-rofi.opacity: 85
 rofi.color-enabled: true
-rofi.color-window: argb:aa273238, argb:aa273238, argb:aa1e2529
-rofi.color-normal: argb:aa273238, #c1c1c1, argb:aa273238, #394249, #ffffff
-rofi.color-active: argb:aa273238, #80cbc4, argb:aa273238, #394249, #80cbc4
-rofi.color-urgent: argb:aa273238, #ff1844, argb:aa273238, #394249, #ff1844
+! state:           'background'   'border'      'seperator'
+rofi.color-window: argb:f0273238, argb:f0273238, argb:00000000
+! state:           'bg'           'fg'           'bgalt'        'hlbg'         'hlfg'
+rofi.color-normal: argb:00000000, argb:ffc1c1c1, argb:00000000, argb:ff394249, argb:ffffffff
+rofi.color-active: argb:00000000, argb:ff80cbc4, argb:00000000, argb:ff394249, argb:ff80cbc4
+rofi.color-urgent: argb:00000000, argb:ffff1844, argb:00000000, argb:ff394249, argb:ffff1844
