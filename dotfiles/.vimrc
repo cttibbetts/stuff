@@ -9,6 +9,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'bogado/file-line'
 Plug 'vim-polyglot'
 Plug 'osyo-manga/vim-brightest'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 " }}}
@@ -115,6 +116,12 @@ set laststatus=2
 
 call unite#filters#matcher_default#use(['matcher-fuzzy'])
 call unite#filters#sorter_default#use(['sorter-rank'])
+
+" }}}
+" syntastic {{{
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_check_on_open = 1
 
 " }}}
 
