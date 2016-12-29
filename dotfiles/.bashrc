@@ -5,7 +5,10 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+export CDPATH=.:~:~/projects
+
 # User specific aliases and functions
+export HIGHBEAMS_SETTINGS=~/.spotlight/settings.py
 
 # Print the id of the docker container - searched by first argument
 dockerid() {

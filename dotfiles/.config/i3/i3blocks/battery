@@ -23,7 +23,10 @@ elif [[ "${STATUS}" = "Charging" ]]; then
             ;;
     esac
 else
-    if [[ "${POWER}" > 80 ]]; then
+    if [[ "${POWER}" = 100 ]]; then
+        # full
+        SYMBOL=""
+    elif [[ "${POWER}" > 80 ]]; then
         # full
         SYMBOL=""
     elif [[ "${POWER}" > 60 ]]; then
