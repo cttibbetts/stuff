@@ -15,6 +15,8 @@ call plug#end()
 " }}}
 " 2 moving around, searching, and patterns {{{
 
+set clipboard=unnamed
+
 set showmatch
 set mat=2
 

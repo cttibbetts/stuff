@@ -10,6 +10,8 @@ export CDPATH=.:~:~/projects
 # User specific aliases and functions
 export HIGHBEAMS_SETTINGS=~/.spotlight/settings.py
 
+eval "$(fasd --init auto)"
+
 # Print the id of the docker container - searched by first argument
 dockerid() {
   docker ps | grep $1 | awk '{print $1}'

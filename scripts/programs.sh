@@ -62,5 +62,13 @@ popd
 # Dejavu-sans-mono font (chrome's default monospace font)
 yum install -y dejavu-sans-mono-fonts
 
-# TODO google-play-music-desktop-player
+# github.com/clvv/fasd
+pushd /tmp
+wget https://github.com/clvv/fasd/archive/1.0.1.tar.gz
+tar -xzf 1.0.1.tar.gz
+pushd fasd-1.0.1/
+make install
+popd
+popd
 
+# TODO google-play-music-desktop-player

@@ -90,6 +90,10 @@ bindsym $mod+space focus mode_toggle
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Vertical/Horizontal Split (tmux style % and ")
+bindsym $mod+v split v
+bindsym $mod+b split h
+
 # resize window
 # bindsym $mod+r mode "resize"
 # I don't like how they do their resizing, so for now I'm not including it.
