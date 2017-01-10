@@ -7,6 +7,8 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
+yum groupinstall -y "X Window System"
+
 # Install i3 dependencies available with yum
 yum install -y \
     libev-devel \
@@ -15,14 +17,15 @@ yum install -y \
     xcb-util-cursor-devel \
     xcb-util-keysyms-devel \
     xcb-util-wm-devel \
-    xcbcommon-x11-devel \
     yajl-devel \
-    pango-devel
+    pango-devel \
+    libxkbcommon-devel \
+    libxkbcommon-x11-devel
 
 # Compile xcb-xrm (xcb-util-xrm)
 yum install -y xorg-x11-util-macros
 pushd /tmp
-git clone git@github.com:Airblader/xcb-util-xrm
+git clone https://github.com/Airblader/xcb-util-xrm
 pushd xcb-util-xrm
 git submodule update --init
 ./autogen.sh --libdir=/usr/lib64
@@ -48,7 +51,7 @@ popd
 
 # Compile i3 gaps
 pushd /tmp
-git clone git@github.com:Airblader/i3
+git clone https://github.com/Airblader/i3
 pushd i3
 autoreconf --force --install
 rm -rf build
