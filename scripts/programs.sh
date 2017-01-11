@@ -22,34 +22,6 @@ yum install -y zathura zathura-pdf-poppler
 yum-config-manager --add-repo https://copr.fedorainfracloud.org/coprs/konimex/neofetch/repo/epel-7/konimex-neofetch-epel-7.repo
 yum install -y neofetch
 
-# playerctl
-yum install gtk-doc glib2-devel-gobject-intropection-devel dbus-x11
-pushd /tmp
-git clone https://github.com/acrisci/playerctl
-pushd playerctl
-./autogen.sh --prefix=/usr
-make
-make install
-cp /usr/lib/libplayerctl* /lib64/
-popd
-popd
-
-# rofi
-pushd /tmp
-wget https://github.com/DaveDavenport/rofi/releases/download/1.2.0/rofi-1.2.0.tar.gz
-tar -xzf rofi-1.2.0.tar.gz
-pushd rofi-1.2.0
-./configure
-make
-make install
-popd
-popd
-
-# alsa (audio) and set volume 100
-yum install -y alsa-utils
-amixer sset Master 100%
-amixer sset PCM 100%
-
 # Sublime text 3
 pushd /tmp
 wget https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2

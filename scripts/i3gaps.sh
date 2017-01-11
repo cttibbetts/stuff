@@ -7,7 +7,13 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
+# Install X
 yum groupinstall -y "X Window System"
+
+# Install audio drivers
+yum install -y dbus-x11 alsa-utils
+amixer sset Master 100%
+amixer sset PCM 100%
 
 # Install i3 dependencies available with yum
 yum install -y \
@@ -60,5 +66,76 @@ pushd build
 ../configure --libdir=/usr/lib64 --sysconfdir=/etc
 make
 make install
+popd
+popd
+popd
 
- 
+########################################
+# Install programs used by my i3 config
+########################################
+yum install -y i3status i3lock rxvt-unicode-256color
+
+# Compile i3 blocks
+pushd /tmp
+git clone https://github.com/Airblader/i3blocks-gaps
+pushd i3blocks-gaps
+make clean all
+make install
+popd
+popd
+
+# Fancy i3 lock screen
+yum install -y giblib giblib-devel ImageMagick
+pushd /tmp
+wget http://scrot.sourcearchive.com/downloads/0.8/scrot_0.8.orig.tar.gz
+tar -xzf scrot_0.8.orig.tar.gz
+pushd scrot-0.8
+./configure
+make
+make install
+popd
+popd
+
+# rofi
+pushd /tmp
+wget https://github.com/DaveDavenport/rofi/releases/download/1.2.0/rofi-1.2.0.tar.gz
+tar -xzf rofi-1.2.0.tar.gz
+pushd rofi-1.2.0
+./configure
+make
+make install
+popd
+popd
+
+# feh
+yum install -y libXinerama-devel imlib2-devel libXt-devel
+pushd /tmp
+git clone git://git.finalrewind.org/feh
+pushd feh
+make
+make install
+popd
+popd
+
+# Compton
+yum install -y libXcomposite-devel libXrandr-devel libconfig-devel dbus-devel asciidoc
+pushd /tmp
+git clone https://github.com/chjj/compton
+pushd compton
+make
+make install
+popd
+popd
+
+# playerctl (controlling and reading audio info from dbux)
+yum install -y gtk-doc glib2-devel gobject-introspection-devel
+pushd /tmp
+git clone https://github.com/acrisci/playerctl
+pushd playerctl
+./autogen.sh --prefix=/usr
+make
+make install
+cp /usr/lib/libplayerctl* /lib64/
+popd
+popd
+

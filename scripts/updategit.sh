@@ -8,6 +8,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 yum install -y \
+    make \
+    autoconf \
     curl-devel \
     expat-devel \
     gettext-devel \
