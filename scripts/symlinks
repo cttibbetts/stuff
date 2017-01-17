@@ -22,3 +22,5 @@ ln -s $(realpath ../dotfiles/.vimrc) ~/.vimrc
 ln -s $(realpath ../dotfiles/.xinitrc) ~/.xinitrc
 ln -s $(realpath ../dotfiles/.Xresources) ~/.Xresources
 ln -s $(realpath ../dotfiles/.config/wallpaper.jpg) ~/.config/wallpaper.jpg
+
+echo "source ~/stuff/dotfiles/.bashrc" >> ~/.bashrc
