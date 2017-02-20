@@ -51,7 +51,7 @@ make install
 popd
 popd
 
-# TODO google-play-music-desktop-player
+# google-play-music-desktop-player
 pushd /tmp
 wget https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v4.0.5/google-play-music-desktop-player-4.0.5.x86_64.rpm
 rpm -i google-play-music-desktop-player-4.0.5.x86_64.rpm

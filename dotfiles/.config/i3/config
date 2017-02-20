@@ -3,7 +3,7 @@ set $windows Mod4
 set $mod Mod1
 
 set $terminal urxvt256c
-set $wallpaper ~/.config/wallpaper.jpg
+set $wallpaper ~/.config/glados.jpg
 
 set $border_px 3
 set $gaps_inner 5

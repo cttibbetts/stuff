@@ -5,22 +5,23 @@ pushd ~
 rm -rf .atom .fonts .vim .config/i3
 popd
 
-ln -s $(realpath ../dotfiles/.fonts) ~/.fonts
-ln -s $(realpath ../dotfiles/.vim) ~/.vim
+ln -s "$(realpath ../dotfiles/.fonts)" ~/.fonts
+ln -s "$(realpath ../dotfiles/.vim)" ~/.vim
 
 mkdir -p ~/.config
-ln -s $(realpath ../dotfiles/.config/i3) ~/.config/i3
+ln -s "$(realpath ../dotfiles/.config/i3)" ~/.config/i3
 
 # Files
 pushd ~
-rm .gitconfig .tmux.conf .vimrc .xinitrc .Xresources .config/wallpaper.jpg
+rm .gitconfig .tmux.conf .vimrc .xinitrc .Xresources .config/wallpaper.jpg .config/glados.jpg
 popd
 
-ln -s $(realpath ../dotfiles/.gitconfig) ~/.gitconfig
-ln -s $(realpath ../dotfiles/.tmux.conf) ~/.tmux.conf
-ln -s $(realpath ../dotfiles/.vimrc) ~/.vimrc
-ln -s $(realpath ../dotfiles/.xinitrc) ~/.xinitrc
-ln -s $(realpath ../dotfiles/.Xresources) ~/.Xresources
-ln -s $(realpath ../dotfiles/.config/wallpaper.jpg) ~/.config/wallpaper.jpg
+ln -s "$(realpath ../dotfiles/.gitconfig)" ~/.gitconfig
+ln -s "$(realpath ../dotfiles/.tmux.conf)" ~/.tmux.conf
+ln -s "$(realpath ../dotfiles/.vimrc)" ~/.vimrc
+ln -s "$(realpath ../dotfiles/.xinitrc)" ~/.xinitrc
+ln -s "$(realpath ../dotfiles/.Xresources)" ~/.Xresources
+ln -s "$(realpath ../dotfiles/.config/wallpaper.jpg)" ~/.config/wallpaper.jpg
+ln -s "$(realpath ../dotfiles/.config/glados.jpg)" ~/.config/glados.jpg
 
 echo "source ~/stuff/dotfiles/.bashrc" >> ~/.bashrc

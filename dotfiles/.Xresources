@@ -4,41 +4,80 @@ URxvt.scrollBar: false
 URxvt.depth: 32
 
 ! special
-URxvt.foreground:   #d9d9d9
-URxvt.background:   [85]#212121
-URxvt.cursorColor:  #d9d9d9
+!URxvt.foreground:   #d9d9d9
+!URxvt.background:   [85]#212121
+!URxvt.cursorColor:  #d9d9d9
 
 ! black
-URxvt.color0:       #212121
-URxvt.color8:       #616161
+!URxvt.color0:       #212121
+!URxvt.color8:       #616161
 
 ! red
-URxvt.color1:       #d1392e
-URxvt.color9:       #e91e63
+!URxvt.color1:       #d1392e
+!URxvt.color9:       #e91e63
 
 ! green
-URxvt.color2:       #4caf50
-URxvt.color10:      #8bc34a
+!URxvt.color2:       #4caf50
+!URxvt.color10:      #8bc34a
 
 ! yellow
-URxvt.color3:       #ff9800
-URxvt.color11:      #ffc107
+!URxvt.color3:       #ff9800
+!URxvt.color11:      #ffc107
 
 ! blue
-URxvt.color4:       #1f77e1
-URxvt.color12:      #03a9f4
+!URxvt.color4:       #1f77e1
+!URxvt.color12:      #03a9f4
 
 ! magenta
-URxvt.color5:       #6f3cca
-URxvt.color13:      #9c27b0
+!URxvt.color5:       #6f3cca
+!URxvt.color13:      #9c27b0
 
 ! cyan
-URxvt.color6:       #009688
-URxvt.color14:      #4db6ac
+!URxvt.color6:       #009688
+!URxvt.color14:      #4db6ac
 
 ! white
-URxvt.color7:       #efefef
-URxvt.color15:      #d9d9d9
+!URxvt.color7:       #efefef
+!URxvt.color15:      #d9d9d9
+
+! special
+*.foreground:   #a39e9b
+!*.background:   [85]#2f1e2e
+*.background:   [85]#212121
+*.cursorColor:  #a39e9b
+
+! black
+*.color0:       #2f1e2e
+*.color8:       #776e71
+
+! red
+*.color1:       #ef6155
+*.color9:       #ef6155
+
+! green
+*.color2:       #48b685
+*.color10:      #48b685
+
+! yellow
+*.color3:       #fec418
+*.color11:      #fec418
+
+! blue
+*.color4:       #06b6ef
+*.color12:      #06b6ef
+
+! magenta
+*.color5:       #815ba4
+*.color13:      #815ba4
+
+! cyan
+*.color6:       #5bc4bf
+*.color14:      #5bc4bf
+
+! white
+*.color7:       #a39e9b
+*.color15:      #e7e9db
+
 
 ! --------------------------
 ! ROFI color theme
