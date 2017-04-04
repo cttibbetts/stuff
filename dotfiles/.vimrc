@@ -10,6 +10,8 @@ Plug 'bogado/file-line'
 Plug 'vim-polyglot'
 Plug 'osyo-manga/vim-brightest'
 Plug 'vim-syntastic/syntastic'
+Plug 'othree/html5.vim'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 " }}}
@@ -124,7 +126,28 @@ call unite#filters#sorter_default#use(['sorter-rank'])
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers=['pylint']
+let g:syntastic_go_checkers=['go', 'golint', 'errcheck']
 let g:syntastic_check_on_open = 1
+
+" }}}
+" vim-go {{{
+
+let g:go_fmt_command = "goimports"
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
+
+" }}}
+" YouCompleteMe {{{
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_auto_trigger = 0
 
 " }}}
 
