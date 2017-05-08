@@ -1,0 +1,24 @@
+install...
+oh my zsh
+tmux
+vim
+vagrant
+(and plugins!)
+brew
+sqlpro
+cyberduck
+docker
+gimp
+google play music desktop player
+minecraft
+mysqlworkbench (?)
+pgadmin (?)
+python3
+sublime
+steam
+tunnelblick
+slack
+virtualbox
+xcode
+
+
